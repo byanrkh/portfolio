@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Grotesk } from "@/lib/fonts";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -47,7 +49,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${Grotesk.className} antialiased`}>{children}</body>
+      <body className={`${Grotesk.className} antialiased`}>
+        <Analytics />
+        <SpeedInsights />
+        {children}
+      </body>
     </html>
   );
 }
