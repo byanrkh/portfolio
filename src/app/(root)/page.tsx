@@ -22,7 +22,7 @@ export default function page() {
             alt="profile"
             width={130}
             height={130}
-            className="rounded-full grayscale hover:grayscale-0"
+            className="aspect-square rounded-full grayscale hover:grayscale-0"
           />
           <svg
             width="102"
